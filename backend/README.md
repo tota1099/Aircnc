@@ -26,12 +26,12 @@ $ mkdir db_mongo && chmod 777 -R db_mongo
 ### Rodar o banco de dados mongodb no docker
 
 ```sh
-docker run --name aircnc-mongo -p 27017:27017 -v ~/db_mongo:/data/db -d mongo:4.2.0
+$ docker run --name aircnc-mongo -p 27017:27017 -v ~/db_mongo:/data/db -d mongo:4.2.0
 ```
 
 ### Instalar dependências e rodar o projeto
 
 ```sh
-yarn
-yarn dev
+$ yarn
+$ yarn dev
 ```
