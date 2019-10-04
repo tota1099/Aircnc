@@ -33,5 +33,6 @@ $ docker run --name aircnc-mongo -p 27017:27017 -v $(pwd)/db_mongo:/data/db -d m
 
 ```sh
 $ yarn
+$ docker start aircnc-mongo
 $ yarn dev
 ```

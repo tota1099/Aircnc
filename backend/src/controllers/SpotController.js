@@ -1,5 +1,9 @@
+const mongoose = require('mongoose');
 const Spot = require('../models/Spot');
 const User = require('../models/User');
+
+mongoose.models = {};
+mongoose.modelSchemas = {};
 
 module.exports = {
     

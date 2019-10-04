@@ -1,17 +1,13 @@
 process.env.NODE_ENV = 'test';
 
-const mongoose = require('mongoose');
 const User = require('../src/models/User');
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../src/server');
-const should = chai.should();
-
-mongoose.models = {};
-mongoose.modelSchemas = {};
 
 chai.use(chaiHttp);
+chai.should();
 
 describe('User', function() {
     beforeEach(function(done) {
@@ -43,7 +39,7 @@ describe('User', function() {
                     res.should.have.status(200);
                     res.body.should.be.a('Object');
                     res.body.email.should.be.equal(email);
-                done();
+                    done();
                 });
         });
     });

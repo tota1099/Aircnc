@@ -10,7 +10,10 @@
   "homepage": "https://github.com/tota1099/aircnc#readme",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "test": "mocha --watch"
+    "test": "mocha tests/**/*.js --exit",
+    "test:tdd": "mocha tests/**/*.js --watch",
+    "test:coverage": "nyc yarn test",
+    "coveralls": "yarn test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "config": "^3.2.3",
@@ -21,7 +24,27 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "coveralls": "^3.0.6",
     "mocha": "^6.2.1",
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.3",
+    "nyc": "^14.1.1"
+  },
+  "nyc": {
+    "functions": 100,
+    "lines": 100,
+    "check-coverage": true,
+    "include": [
+      "src"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**",
+      "uploads/**",
+      "**/db_mongo/**",
+      "**/coverage/**"
+    ]
   }
 }
