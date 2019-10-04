@@ -35,7 +35,3 @@ $ docker run --name aircnc-mongo -p 27017:27017 -v $(pwd)/db_mongo:/data/db -d m
 $ yarn
 $ yarn dev
 ```
-
-## License
-
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter mais detalhes.

@@ -10,3 +10,7 @@ Este projeto foi desenvolvido na Semana OmniStack 9 feita pela [Rocketseat](http
 ## Como rodar o projeto
 
 O passo a passo de como rodar cada parte do projeto (backend, frontend e o aplicativo) são explicadas dentro da pasta de cada parte do projeto. Por exemplo, dentro da pasta "backend" existe uma explicação individual desta parte do projeto, assim como a pasta "frontend" e "aircnc" (aplicativo mobile).
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter mais detalhes.
