@@ -26,7 +26,7 @@ $ mkdir db_mongo && chmod 777 -R db_mongo
 ### Rodar o banco de dados mongodb no docker
 
 ```sh
-$ docker run --name aircnc-mongo -p 27017:27017 -v ~/db_mongo:/data/db -d mongo:4.2.0
+$ docker run --name aircnc-mongo -p 27017:27017 -v $(pwd)/db_mongo:/data/db -d mongo:4.2.0
 ```
 
 ### Instalar dependências e rodar o projeto
@@ -35,3 +35,7 @@ $ docker run --name aircnc-mongo -p 27017:27017 -v ~/db_mongo:/data/db -d mongo:
 $ yarn
 $ yarn dev
 ```
+
+## License
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter mais detalhes.

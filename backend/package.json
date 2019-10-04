@@ -2,16 +2,26 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Renan Porto <renan.porto1099@gmail.com> (https://tota1099.github.io/site/)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tota1099/aircnc/issues"
+  },
+  "homepage": "https://github.com/tota1099/aircnc#readme",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "test": "mocha --watch"
   },
   "dependencies": {
+    "config": "^3.2.3",
     "express": "^4.17.1",
     "mongoose": "^5.7.3",
     "multer": "^1.4.2"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.1",
     "nodemon": "^1.19.3"
   }
 }

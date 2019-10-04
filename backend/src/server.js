@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
+const config = require('config');
 
 const app = express();
 
-mongoose.connect('mongodb://@localhost:27017/aircnc', {
+mongoose.connect(config.DBHost, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -12,4 +13,8 @@ mongoose.connect('mongodb://@localhost:27017/aircnc', {
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333);
+if(process.env.NODE_ENV === 'test'){
+    module.exports = app;
+} else {
+    app.listen(3333);
+}
