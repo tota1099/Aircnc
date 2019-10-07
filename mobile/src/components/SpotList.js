@@ -34,7 +34,7 @@ function SpotList({ tech, navigation }) {
                 showsHorizontalScrollIndicator={false}
                 renderItem={({ item: spot }) => (
                     <View style={styles.listItem}>
-                        <Image style={styles.thumbnail} source={{ uri: spot.thumbnail_url }} />
+                        <Image style={styles.thumbnail} source={{ uri: spot.thumbnail_url.replace('localhost', '192.168.0.12') }} />
                         <Text style={styles.company}>{spot.company}</Text>
                         <Text style={styles.price}>{spot.price ? `R${spot.price}/dia` : 'GRATUITO' }</Text>
                         <TouchableOpacity onPress={() => handleNavigate(spot._id)} style={styles.button}>
